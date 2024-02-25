@@ -6,6 +6,7 @@ const Home = () => {
     <>
     <div>Home</div>
     <button onClick={() => navigate('order-summary')}>Place order</button>
+    
     </>
   )
 }
