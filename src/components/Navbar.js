@@ -14,6 +14,7 @@ const Navbar = () => {
       <NavLink style={navLinkStyles} to="/">Home</NavLink>
       <NavLink style={navLinkStyles} to="/about">About</NavLink>
       <NavLink style={navLinkStyles} to="/contact">Contact</NavLink>
+      <NavLink style={navLinkStyles} to="/message">Message</NavLink>
     </nav>
   );
 };
