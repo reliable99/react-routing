@@ -2,7 +2,7 @@ import React from 'react'
 
 const NoMatch = () => {
   return (
-    <div>No Route Match</div>
+    <div>Page Not Found</div>
   )
 }
 
