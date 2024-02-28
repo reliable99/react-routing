@@ -11,6 +11,8 @@ import NewProduct from "./components/NewProduct";
 import NewRules from "./components/NewRules";
 import Newnews from "./components/Newnews";
 import Oldnews from "./components/Oldnews";
+import Users from "./components/Users";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   return (
@@ -22,14 +24,19 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="order-summary" element={<OrderSummary />} />
         <Route path="#" element={<NoMatch />} />
-        <Route path="product" element={<Product />} >
-          <Route path="featured" element={<FeaturedProduct/>}/>
-          <Route path="new" element={<NewProduct/>}/>
-           </Route>
-           <Route path="newr" element={<NewRules />}>
-            <Route path="new" element={<Newnews/>}/>d
-            <Route path="old" element={<Oldnews/>}/>
-           </Route>
+        <Route path="product" element={<Product />}>
+          <Route index element={<NewProduct/>}/>
+          <Route path="featured" element={<FeaturedProduct />} />
+          <Route path="new" element={<NewProduct />} />
+        </Route>
+        <Route path="newr" element={<NewRules />}>
+          <Route path="new" element={<Newnews />} />d
+          <Route path="old" element={<Oldnews />} />
+        </Route>
+        <Route path="users" element={<Users/>}/>
+        <Route path="users/:userId" element={<UserDetails/>}/>
+        
+
       </Routes>
     </>
   );
