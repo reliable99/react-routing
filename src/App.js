@@ -13,6 +13,7 @@ import Newnews from "./components/Newnews";
 import Oldnews from "./components/Oldnews";
 import Users from "./components/Users";
 import UserDetails from "./components/UserDetails";
+import Admin from "./components/Admin";
 
 function App() {
   return (
@@ -33,8 +34,14 @@ function App() {
           <Route path="new" element={<Newnews />} />d
           <Route path="old" element={<Oldnews />} />
         </Route>
-        <Route path="users" element={<Users/>}/>
-        <Route path="users/:userId" element={<UserDetails/>}/>
+      <Route path="users" element={<Users/>}>
+      <Route path=":usersId" element={<UserDetails/>}/>
+        <Route path="admin" element={<Admin/>}/>
+      </Route>
+        
+        
+        
+        
         
 
       </Routes>
